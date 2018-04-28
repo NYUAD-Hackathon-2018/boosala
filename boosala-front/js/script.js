@@ -26,7 +26,7 @@ $("#submit").click(function (){
     their = $( "#their" ).val();
     localStorage.setItem("me", me);
     localStorage.setItem("their", their);
-    $("#their-name").text(me);
+    $("#their-name").text(their);
     $("#search").hide();
     $("#home").hide();
 });
