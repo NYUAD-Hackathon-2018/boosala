@@ -27,7 +27,19 @@ $("#submit").click(function (){
     localStorage.setItem("me", me);
     localStorage.setItem("their", their);
     $("#their-name").text(me);
-    $("#result").show();
     $("#search").hide();
     $("#home").hide();
 });
+
+
+function parseData(dataVals) {
+var jsonData = JSON.parse(dataVals);
+var matchFound=false;
+for (var i = 0; i < jsonData.counters.length; i++) {
+   var counter = jsonData.counters[i];
+   if(counter.similarity>70) {
+       matchFound = true;
+       $("#result").show();
+   }
+}
+}

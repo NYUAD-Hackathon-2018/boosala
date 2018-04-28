@@ -14,9 +14,9 @@
     <link rel="stylesheet" href="css/responsive.css">
 
     <!-- AMAzon -->
-    <script src="https://github.com/NYUAD-Hackathon-2018/boosala/blob/master/amazon-cognito-identity.min.js"></script>
-  <script src="amazon-cognito-identity.min.js"></script>
-  <script src="https://sdk.amazonaws.com/js/aws-sdk-2.229.1.min.js"></script>
+    <script src="js/aws-cognito-sdk.min.js"></script>
+    <script src="js/amazon-cognito-identity.min.js"></script>
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.229.1.min.js"></script>
 
 </head>
 <body>
@@ -42,30 +42,14 @@
                 <br/>
                 I'm looking for <input id="their" type="text" name="him" placeholder="Their name">.</h5>
                 <div id="secondary" class="col-lg-6 col-md-6 col-xs-12 align-right">
-                    <!--index.php -->
-                    <!-- <form enctype="multipart/form-data" action="" method="POST">  -->
-                        <label for="fileToUpload">
-                            <img id="picture" src="images/face.jpeg" alt="Their"/>
-                        </label>
-                        <input id="fileToUpload" type='file' name="fileToUpload" onchange="readURL(this);" />
+                    <label for="fileToUpload">
+                        <img id="picture" src="images/face.jpeg" alt="Their"/>
+                    </label>
+                    <input id="fileToUpload" type='file' name="fileToUpload" onchange="readURL(this);" />
                 </div>
-                        <div id="send" class="col-lg-6 col-md-6 col-xs-12 align-left">
-                            <button id="submit" name="submit" onChange= "ProcessImage();">Submit My Information</button>
-                        </div>
-                    <!-- </form> -->
-                <?PHP
-                  // if(!empty($_FILES['uploaded_file'])){
-                  //   $path = "images/uploads/";
-                  //   $path = $path . basename( $_FILES['uploaded_file']['name']);
-                  //   if(move_uploaded_file($_FILES['uploaded_file']['tmp_name'], $path)) {
-                  //     echo "The file ".  basename( $_FILES['uploaded_file']['name']). 
-                  //     " has been uploaded";
-                  //   }else{
-                  //       echo "";
-                  //   }
-                  // }
-                ?>
-
+                <div id="send" class="col-lg-6 col-md-6 col-xs-12 align-left">
+                    <button id="submit" name="submit" onChange= "ProcessImage();">Submit My Information</button>
+                </div>
             </div>
             </div>
         </div>
