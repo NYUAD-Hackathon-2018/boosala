@@ -33,19 +33,19 @@
         <div class="container">
             <div class="col-lg-8 col-lg-offset-2 col-md-6 col-xs-12 align-center">
                 <img id="logo" src="images/logo.png" />
-                <h5>My name is <input type="text" name="me" placeholder="Your name"> and
+                <h5>My name is <input id="me" type="text" name="me" placeholder="Your name"> and
                 <br/>
-                I'm looking for <input type="text" name="him" placeholder="Their name">.</h5>
+                I'm looking for <input id="their" type="text" name="him" placeholder="Their name">.</h5>
                 <div id="secondary" class="col-lg-6 col-md-6 col-xs-12 align-right">
                     <!--index.php -->
                     <!-- <form enctype="multipart/form-data" action="" method="POST">  -->
-                        <label for="file-upload">
+                        <label for="fileToUpload">
                             <img id="picture" src="images/face.jpeg" alt="Their"/>
                         </label>
-                        <input id="file-upload" type='file' name="uploaded_file" onchange="readURL(this);" />
+                        <input id="fileToUpload" type='file' name="fileToUpload" onchange="readURL(this);" />
                 </div>
                         <div id="send" class="col-lg-6 col-md-6 col-xs-12 align-left">
-                            <button id="submit" name="submit">Submit My Information</button>
+                            <button id="submit" name="submit" onChange= "ProcessImage();">Submit My Information</button>
                         </div>
                     <!-- </form> -->
                 <?PHP
@@ -60,6 +60,7 @@
                   //   }
                   // }
                 ?>
+
             </div>
             </div>
         </div>
@@ -71,7 +72,7 @@
             <div class="col-lg-8 col-lg-offset-2 col-md-6 col-xs-12 align-center">
                 <img id="logo" src="images/logo.png" />
                 <h5>FOUND</h5>
-                <h4>John may have been located at Damas on Monday, 29 March 2017</h4>
+                <h4><span id="their-name">John</span> may have been located at Damas on Monday, 29 March 2017</h4>
                 <iframe
                   width="450"
                   height="300"
@@ -88,5 +89,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery-2.2.4.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/detection.js"></script>
+
 </body>
 </html>

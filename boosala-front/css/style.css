@@ -74,7 +74,7 @@ textarea:focus, input:focus{
 #search #submit:hover{opacity: 1}
 #back {position: absolute;padding: 30px;opacity: 0.5;color: black;cursor: pointer;}
 #back:hover {opacity: 1;}
-#search #file-upload {display: none;}
+#search #fileToUpload {display: none;}
 
 
 /*~ Result ~*/
