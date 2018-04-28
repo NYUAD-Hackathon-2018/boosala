@@ -1,3 +1,9 @@
+$("#send").click(function () {
+    $("#result").show();
+    $("#search").hide();
+    $("#home").hide();
+});
+
 $("#start").click(function () {
     $("#search").show();
     $("#home").hide();
@@ -7,6 +13,8 @@ $("#back").click(function () {
     $("#home").show();
     $("#search").hide();
 });
+
+
 
 
 function readURL(input) {
