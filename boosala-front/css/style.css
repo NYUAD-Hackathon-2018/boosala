@@ -47,7 +47,34 @@ textarea:focus, input:focus{
 /*~~~~~ SECTIONS ~~~~~*/
 
 /*~ Home ~*/
-#home #logo{width: 65%;margin-top: 10em}
+#home .logo{
+    position: absolute;
+    width: 100%;
+    margin-top: 5em;
+}
+
+@-webkit-keyframes rotation {
+    0% {
+            -webkit-transform: rotate(0deg);
+    }
+    25% {
+            -webkit-transform: rotate(20deg);
+    }
+    50% {
+            -webkit-transform: rotate(10deg);
+    }
+    75% {
+            -webkit-transform: rotate(15deg);
+    }
+    100% {
+            -webkit-transform: rotate(0deg);
+    }
+}
+
+#home #logo-front{
+-webkit-animation: rotation 5s linear, 5s rotation 5s linear;
+}
+
 #home{display: block; 
     background: url('../images/bg.png') no-repeat #f5f5f5 ;
     background-size: cover; 
@@ -64,7 +91,12 @@ textarea:focus, input:focus{
 
 /*~ Search ~*/
 #search {display: none; padding: 0px;}
-#search #logo{width: 15%;padding-top: 50px}
+#search .logo{position: absolute; width: 15%;padding-top: 50px}
+.search-logo{left: 70%}
+#search #logo{
+    width: 15%;
+    margin-top: 5em;
+}
 #search h5{font-size: 30px;padding-top: 50px}
 #search input{font-size: 20px;width: 200px;text-align: center;border: 0px;border-bottom: 1px solid;background-color: #f5f5f5}
 #search br { display: block;margin: 20px 0;line-height:22px;content: "";}
@@ -82,3 +114,7 @@ textarea:focus, input:focus{
 #result #logo{width: 15%;padding-top: 50px}
 #result h5{font-size: 30px;padding-top: 20px}
 #result h4{font-size: 25px;padding-top: 20px;line-height: 30px}
+#result #logo{
+    width: 15%;
+    margin-top: 5em;
+}
