@@ -33,13 +33,17 @@ $("#submit").click(function (){
 
 
 function parseData(dataVals) {
-var jsonData = JSON.parse(dataVals);
-var matchFound=false;
-for (var i = 0; i < jsonData.counters.length; i++) {
-   var counter = jsonData.counters[i];
-   if(counter.similarity>70) {
-       matchFound = true;
-       $("#result").show();
-   }
-}
+    var matches = dataVals["FaceMatches"];
+    var matchFound = false;
+    if (matches.length > 0) {
+        for (var i = 0; i < matches.length; ++i) {
+            var match = matches[i];
+            if (match["Similarity"] >= 70) {
+                matchFound = true;
+                console.log("MATCH");
+                $("#result").show();
+            }
+        }
+    }
+    console.log("NO MATCH");
 }
