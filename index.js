@@ -7,11 +7,12 @@ const path = __dirname + "/faces";
 fs.readdir(__dirname + "/faces", (err, files) => {
     if(err) throw err;
     files.forEach(file => {
-        doThings(__dirname+"/faces/"+file, file);
+        uploadAndIndexFile(__dirname+"/faces/"+file, file);
     });
   })
 
-function doThings(filename, fi){
+// fi is without path and filename includes full path
+function uploadAndIndexFile(filename, fi){
     // Read in the file, convert it to base64, store to S3
     fs.readFile(filename, function (err, data) {
         if (err) { throw err; }

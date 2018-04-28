@@ -61,14 +61,14 @@
    //Search Faces by Image
 function searchFacesByImage(imageData) {
   var rekognition = new AWS.Rekognition();
-var params = {
+  var params = {
   CollectionId: [COLLECTION NAME], 
   Image: { /* required */
     Bytes: imageBytes || 'STRING_VALUE',  // no default yet...
   },
-  FaceMatchThreshold: 70.0,
-  MaxFaces: 1
-};
+  FaceMatchThreshold: 50.0,
+  MaxFaces: 10
+ };
 rekognition.searchFacesByImage(params, function(err, data) {
   if (err) 
     console.log(err, err.stack); // an error occurred

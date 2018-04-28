@@ -38,10 +38,11 @@ function parseData(dataVals) {
     if (matches.length > 0) {
         for (var i = 0; i < matches.length; ++i) {
             var match = matches[i];
-            if (match["Similarity"] >= 70) {
+            if (match["Similarity"] >= 50) {
                 matchFound = true;
                 console.log("MATCH");
                 $("#result").show();
+                return;
             }
         }
     }
