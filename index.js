@@ -1,13 +1,13 @@
 const AWS = require('aws-sdk'), fs = require('fs');
 AWS.config.update({ region: 'us-east-2', accessKeyId: 'AKIAJO25TVMVWWL5RVRQ', secretAccessKey: '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' });
 
-const path = __dirname + "/frames";
+const path = __dirname + "/faces";
 
 
-fs.readdir(__dirname + "/frames", (err, files) => {
+fs.readdir(__dirname + "/faces", (err, files) => {
     if(err) throw err;
     files.forEach(file => {
-        doThings(__dirname+"/frames/"+file, file);
+        doThings(__dirname+"/faces/"+file, file);
     });
   })
 
