@@ -13,6 +13,11 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
 
+    <!-- AMAzon -->
+    <script src="https://github.com/NYUAD-Hackathon-2018/boosala/blob/master/amazon-cognito-identity.min.js"></script>
+  <script src="amazon-cognito-identity.min.js"></script>
+  <script src="https://sdk.amazonaws.com/js/aws-sdk-2.229.1.min.js"></script>
+
 </head>
 <body>
     <section id="home">
@@ -89,7 +94,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery-2.2.4.min.js"></script>
     <script src="js/script.js"></script>
-    <script src="js/detection.js"></script>
+    <script src="js/searchFacesByImage.js"></script>
 
 </body>
 </html>
