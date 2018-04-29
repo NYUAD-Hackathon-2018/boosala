@@ -69,8 +69,10 @@ function searchFacesByImage(imageData) {
   MaxFaces: 10
  };
 rekognition.searchFacesByImage(params, function(err, data) {
-  if (err) 
+  if (err) {
     console.log(err, err.stack); // an error occurred
+    $("#not-found").show();
+  }
   else     
     parseData(data);
     console.log(data);        // successful response
