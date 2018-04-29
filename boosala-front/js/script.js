@@ -46,6 +46,7 @@ function parseData(dataVals) {
             }
         }
     }
+    console.log("show not found");
     $("#not-found").show();
     console.log("NO MATCH");
 }
