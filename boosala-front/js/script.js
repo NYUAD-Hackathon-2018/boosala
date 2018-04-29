@@ -46,6 +46,7 @@ $("#submit").click(function (){
 
     $("#their-name-not-found").text(their);
     $("#submit").html("Searching for "+their+"...");
+    
 
     ProcessImage();
     window.setTimeout(function() {$("#search").hide(); $("#home").hide();$("#submit").html("Find");}, 4000);
