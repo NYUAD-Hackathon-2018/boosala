@@ -20,6 +20,7 @@ li a:hover{text-decoration: none;}
 a:hover{text-decoration: none;color: #1c1c1c; opacity: 1; transition: 100ms; cursor: pointer};
 a{text-decoration: none !important; color: #1c1c1c; opacity: 0.8; transition: 100ms}
 
+a#project_link:hover{text-decoration: underline;}
 
 textarea:focus, input:focus{
     outline: none;
