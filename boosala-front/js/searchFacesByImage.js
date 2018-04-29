@@ -34,11 +34,9 @@
         for (var i = 0; i < length; i++) {
           ua[i] = image.charCodeAt(i);
         }
-        console.log(imageBytes);
-        console.log(ua);
+        console.log("Searching database for matching face")
         //Call Rekognition  
         searchFacesByImage(imageBytes);
-        //console.log(imageBytes); 
       };
     })(file);
     reader.readAsDataURL(file);
