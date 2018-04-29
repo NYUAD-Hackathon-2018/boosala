@@ -39,7 +39,7 @@ $("#submit").click(function (){
     localStorage.setItem("me", me);
     localStorage.setItem("their", their);
     $("#their-name").text(their);
-    $("#submit").html("Loading...");
+    $("#submit").html("Finding "+their.toUpperCase()+"...");
     ProcessImage();
     window.setTimeout(function() {$("#search").hide(); $("#home").hide();$("#submit").html("Find");}, 4000);
 });
@@ -63,3 +63,4 @@ function parseData(dataVals) {
     $("#not-found").show();
     console.log("NO MATCH");
 }
+
