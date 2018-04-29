@@ -27,29 +27,14 @@ function readURL(input) {
                 .attr('src', e.target.result)
                 .width(150)
                 .height(200);
+
             // local storage of base64 of family's image for later display
-            
             var picData = e.target.result.split(',')[1];
             localStorage.setItem("picBase64Data", picData);
 
         };
         reader.readAsDataURL(input.files[0]);
     }
-}
-
-function getBase64Image(img) {
-    var canvas = document.createElement("canvas");
-    canvas.width = img.width;
-    canvas.height = img.height;
-
-    var ctx = canvas.getContext("2d");
-    ctx.drawImage(img, 0, 0);
-    img.crossOrigin="Anonymous";  // must serve website from web server because of cross-origin stuff from file:///
-    console.log(img);
-
-    var dataURL = canvas.toDataURL("image/png");
-
-    return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
 }
 
 $("#submit").click(function (){
@@ -68,6 +53,9 @@ $("#submit").click(function (){
 
 
 function parseData(dataVals) {
+    // reconstruct uploaded image of the person
+    var dataImage = localStorage.getItem('picBase64Data');
+
     var matches = dataVals["FaceMatches"];
     var matchFound = false;
     if (matches.length > 0) {
@@ -76,17 +64,21 @@ function parseData(dataVals) {
             if (match["Similarity"] >= 50) {
                 matchFound = true;
                 console.log("MATCH");
+                
+                var missing_person_f_img = document.getElementById('missing_person_f');
+                missing_person_f_img.src = "data:image/png;base64," + dataImage;
                 $("#result").show();
                 return;
             }
         }
     }
+
     console.log("NO MATCH");
     console.log("show not found");
     
-    var dataImage = localStorage.getItem('picBase64Data');
-    var missing_person_img = document.getElementById('missing_person');
-    missing_person_img.src = "data:image/png;base64," + dataImage;
+    var missing_person_nf_img = document.getElementById('missing_person_nf');
+    missing_person_nf_img.src = "data:image/png;base64," + dataImage;
+
     $("#not-found").show();    
 }
 
