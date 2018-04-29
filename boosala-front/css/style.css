@@ -100,11 +100,15 @@ textarea:focus, input:focus{
 #search h5{font-size: 30px;padding-top: 50px}
 #search input{font-size: 20px;width: 200px;text-align: center;border: 0px;border-bottom: 1px solid;background-color: #f5f5f5}
 #search br { display: block;margin: 20px 0;line-height:22px;content: "";}
-#search #picture{width: 70%;padding-top:70px;transform: rotate(-15deg);opacity: 0.9;cursor: pointer;}
+#search #picture{width: 70%;top:70px;transform: rotate(-15deg);opacity: 0.9;cursor: pointer;
+    padding-top: 10%;
+    border:10px solid white;
+    box-shadow:2px 2px 10px #B8B8B8;
+    margin-top: 20%}
 #search #picture:hover{opacity: 1}
 #search #submit{font-size: 12px;color: #f5f5f5; background-color: #aba000;padding: 5px 20px; border-radius: 15px; border: 0px;margin-top: 120px; opacity: 0.8;margin-left: 10px}
 #search #submit:hover{opacity: 1}
-#back {position: absolute;padding: 30px;opacity: 0.5;color: black;cursor: pointer;}
+#back {position: absolute;top: 30px;opacity: 0.5;color: black;cursor: pointer;}
 #back:hover {opacity: 1;}
 #search #fileToUpload {display: none;}
 
