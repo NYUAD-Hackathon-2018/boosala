@@ -136,4 +136,4 @@ textarea:focus, input:focus, button:focus{
 #not-found #not-found-message{font-size: 20px;text-align: justify;text-align-last: center;letter-spacing: 1px}
 #not-found #not-found-message #project{font-size: 22px;font-weight: 900}
 #not-found #not-found-message #their-name{font-size: 22px;font-weight: 900}
-#not-found input{font-size: 20px;text-align: center;border: 0px;border-bottom: 1px solid;background-color: #f5f5f5}
+#not-found input{font-size: 20px;text-align: center;border: 0px;border-bottom: 1px solid;background-color: #f5f5f5; margin-bottom: 50px}
