@@ -39,12 +39,12 @@
         <div class="container">
             <div class="col-lg-8 col-lg-offset-2 col-md-6 col-xs-12 align-center">
                     <img id="logo"src="images/logo.png" />
-                <h5>My name is <input id="me" type="text" name="me" placeholder="Your name"> and
+                <h5>My name is <input id="me" type="text" name="me" placeholder="Your name" required> and
                 <br/>
-                I'm looking for <input id="their" type="text" name="him" placeholder="Their name">.</h5>
+                I'm looking for <input id="their" type="text" name="him" placeholder="Their name" required>.</h5>
                 <div id="secondary" class="col-lg-6 col-md-6 col-xs-12 align-right">
-                    <label for="fileToUpload">
-                        <img id="picture" src="images/face.jpeg" alt="Their"/>
+                     <label for="fileToUpload">
+                            <img id="picture" src="images/face.jpeg" alt="Their" title="Click to upload a photo of your person"/>
                     </label>
                     <input id="fileToUpload" type='file' name="fileToUpload" onchange="readURL(this);" />
                 </div>
@@ -62,7 +62,7 @@
             <div class="col-lg-8 col-lg-offset-2 col-md-6 col-xs-12 align-center">
                 <img id="logo" src="images/logo.png" />
                 <h5>FOUND</h5>
-                <h4><span id="their-name"></span> may have been located at Damas on Monday, 29 March 2017</h4>
+                <h4><span id="their-name"></span> may have been located at Diavata Refugee Camp on Monday, 29 March 2017</h4>
                 <iframe
                   width="450"
                   height="300"
