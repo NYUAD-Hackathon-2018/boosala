@@ -70,12 +70,14 @@ function searchFacesByImage(imageData) {
 	   FaceMatchThreshold: 50.0,
 	   MaxFaces: 10
     };
-
-    rekognition.searchFacesByImage(params, function(err, data) {
-	    if (err) 
-		    console.log(err, err.stack); // an error occurred
-	    else     
-		    parseData(data);
-	    console.log(data);        // successful response
-	  });
+  
+  rekognition.searchFacesByImage(params, function(err, data) {
+    if (err) {
+      console.log(err, err.stack); // an error occurred
+      $("#not-found").show();
+    }
+    else     
+      parseData(data);
+      console.log(data);        // successful response
+  });
 }

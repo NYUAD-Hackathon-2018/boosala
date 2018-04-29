@@ -122,3 +122,11 @@ textarea:focus, input:focus{
     width: 15%;
     margin-top: 5em;
 }
+
+/*~ not-found ~*/
+#not-found {display: none; padding: 0px;}
+#not-found #logo{width: 15%;padding-top: 50px}
+#not-found h5{font-size: 30px;padding-top: 20px;padding-bottom: 35px}
+#not-found #not-found-message{font-size: 20px;text-align: justify;text-align-last: center;letter-spacing: 1px}
+#not-found #not-found-message #project{font-size: 22px;font-weight: 900}
+#not-found #not-found-message #their-name{font-size: 22px;font-weight: 900}
