@@ -21,7 +21,7 @@ function uploadAndIndexFile(filename, fi){
 
         var s3 = new AWS.S3();
         s3.putObject({
-            Bucket: 'testjedbucket',
+            Bucket: 'boosala-neirouz-faces',
             Key: fi,
             Body: base64data
         },function (resp) {
@@ -34,10 +34,10 @@ function uploadAndIndexFile(filename, fi){
     var rekognition = new AWS.Rekognition();
 
     var params = {
-        CollectionId: 'refugeesCollection', /* required */
+        CollectionId: 'refugeeCollection', /* required */
         Image: { /* required */
             S3Object: {
-                Bucket: 'testjedbucket',
+                Bucket: 'boosala-neirouz-faces',
                 Name: fi
             }
         },

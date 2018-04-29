@@ -25,8 +25,8 @@ function readURL(input) {
         reader.onload = function (e) {
             $('#picture')
                 .attr('src', e.target.result)
-                .width(150)
-                .height(200);
+                .width(250);
+                
 
             // local storage of base64 of family's image for later display
             var picData = e.target.result.split(',')[1];

@@ -20,12 +20,12 @@ http.createServer(function (request, response) {
 console.log('Server running at http://127.0.0.1:8000/')
 
 // Convert refcampvid.mp4 video to sequence of frames in the frames folder
-// var output = shell.exec("ffmpeg -i refcampvid.mp4 frames\\refcampvid_%05d.jpg").output;
+//var output = shell.exec("ffmpeg -i neirouzvideo.mp4 frames\\neirouzvid%05d.jpg").output;
 
 // Load JSON file
 // var json =  require("./refcampvid");
 const fs = require("fs");
-let rawdata = fs.readFileSync("refcampvid.json");
+let rawdata = fs.readFileSync("neirouzvideo.json");
 let refcampvid = JSON.parse(rawdata);
 console.log(refcampvid['Faces'].length);
 
@@ -60,9 +60,9 @@ for (var i = 0; i < Object.keys(refcampvid['Faces']).length; i++) {
    while (istring.length < (5 || 2)) {istring = "0" + istring;}
    // console.log(istring);
 
-    sharp("frames\\refcampvid_" + s + ".jpg")
+    sharp("neirouz_frames/neirouzvideo" + s + ".jpg")
        .extract({ left: x, top: y, width: width, height: height })
-       .toFile("faces\\refcampvid_" + s + "_" + istring + ".png", function(err) {
+       .toFile("neirouz_faces/neirouzvideo" + s + istring + ".png", function(err) {
             console.log(err);
         });
 }
