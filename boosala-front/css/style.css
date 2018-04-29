@@ -22,7 +22,7 @@ a{text-decoration: none !important; color: #1c1c1c; opacity: 0.8; transition: 10
 
 a#project_link:hover{text-decoration: underline;}
 
-textarea:focus, input:focus{
+textarea:focus, input:focus, button:focus{
     outline: none;
 }
 
@@ -42,7 +42,7 @@ textarea:focus, input:focus{
 
 .vertical-center {
     position: relative;
-    top: 200px;
+    top: 140px;
 }
 
 /*~~~~~ SECTIONS ~~~~~*/
@@ -51,7 +51,7 @@ textarea:focus, input:focus{
 #home .logo{
     position: absolute;
     width: 100%;
-    margin-top: 5em;
+    margin-top: 0em;
 }
 
 @-webkit-keyframes rotation {
@@ -89,7 +89,12 @@ textarea:focus, input:focus{
 #home h4{font-size: 30px;opacity: 0.8}
 #home #start{font-size: 25px;color: #f5f5f5; background-color: #d62839;padding: 5px 150px; border-radius: 15px; border: 0px;margin-top: 30px; opacity: 0.8}
 #home #start:hover{opacity: 1}
+#home #main h2{font-size: 60px;position: relative;top: 45px;right: 160px}
 
+#home #languages{padding: 12rem;padding-top: 1rem;padding-bottom: 1rem;padding-right: 0em;z-index: 9999}
+#home #languages li{display: inline-block;padding: 0px 0px 0px 20px;font-size: 17px;}
+#home #languages button{border-width: 0;background: none;outline: none;}
+#home .focus{font-weight: 900}
 /*~ Search ~*/
 #search {display: none; padding: 0px;}
 #search .logo{position: absolute; width: 15%;padding-top: 50px}
@@ -121,7 +126,7 @@ textarea:focus, input:focus{
 #result h4{font-size: 25px;padding-top: 20px;line-height: 30px}
 #result #logo{
     width: 15%;
-    margin-top: 5em;
+    margin-top: 0em;
 }
 
 /*~ not-found ~*/

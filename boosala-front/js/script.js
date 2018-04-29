@@ -58,8 +58,10 @@ $("#submit").click(function (){
     localStorage.setItem("me", me);
     localStorage.setItem("their", their);
     $("#their-name").text(their);
+
     $("#their-name-not-found").text(their);
     $("#submit").html("Searching for "+their+"...");
+
     ProcessImage();
     window.setTimeout(function() {$("#search").hide(); $("#home").hide();$("#submit").html("Find");}, 4000);
 });
@@ -85,6 +87,6 @@ function parseData(dataVals) {
     var dataImage = localStorage.getItem('picBase64Data');
     var missing_person_img = document.getElementById('missing_person');
     missing_person_img.src = "data:image/png;base64," + dataImage;
-    $("#not-found").show();
-    
+    $("#not-found").show();    
 }
+
