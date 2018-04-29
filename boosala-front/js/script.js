@@ -27,10 +27,29 @@ function readURL(input) {
                 .attr('src', e.target.result)
                 .width(150)
                 .height(200);
+            // local storage of base64 of family's image for later display
+            
+            var picData = e.target.result.split(',')[1];
+            localStorage.setItem("picBase64Data", picData);
+
         };
         reader.readAsDataURL(input.files[0]);
-        // local storage of base64 of family's image for later display?
     }
+}
+
+function getBase64Image(img) {
+    var canvas = document.createElement("canvas");
+    canvas.width = img.width;
+    canvas.height = img.height;
+
+    var ctx = canvas.getContext("2d");
+    ctx.drawImage(img, 0, 0);
+    img.crossOrigin="Anonymous";  // must serve website from web server because of cross-origin stuff from file:///
+    console.log(img);
+
+    var dataURL = canvas.toDataURL("image/png");
+
+    return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
 }
 
 $("#submit").click(function (){
@@ -39,7 +58,8 @@ $("#submit").click(function (){
     localStorage.setItem("me", me);
     localStorage.setItem("their", their);
     $("#their-name").text(their);
-    $("#submit").html("Loading...");
+    $("#their-name-not-found").text(their);
+    $("#submit").html("Searching for "+their+"...");
     ProcessImage();
     window.setTimeout(function() {$("#search").hide(); $("#home").hide();$("#submit").html("Find");}, 4000);
 });
@@ -59,7 +79,12 @@ function parseData(dataVals) {
             }
         }
     }
-    console.log("show not found");
-    $("#not-found").show();
     console.log("NO MATCH");
+    console.log("show not found");
+    
+    var dataImage = localStorage.getItem('picBase64Data');
+    var missing_person_img = document.getElementById('missing_person');
+    missing_person_img.src = "data:image/png;base64," + dataImage;
+    $("#not-found").show();
+    
 }
