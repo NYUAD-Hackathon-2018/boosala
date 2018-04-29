@@ -44,9 +44,9 @@
   //Provides anonymous log on to AWS services
   function AnonLog() {
     // Configure the credentials provider to use your identity pool
-    AWS.config.region = [REGION]; // Region
+    AWS.config.region = 'us-east-1'; // Region
     AWS.config.credentials = new AWS.CognitoIdentityCredentials({
-      IdentityPoolId: [IDENTITY],
+      IdentityPoolId: 'us-east-1:ca34290a-1e46-43fd-b6d8-6e4263335a0a',
     });
     // Make the call to obtain credentials
     AWS.config.credentials.get(function () {
@@ -60,7 +60,7 @@
 function searchFacesByImage(imageData) {
   var rekognition = new AWS.Rekognition();
   var params = {
-  CollectionId: [COLLECTION NAME], 
+  CollectionId: 'refugeeCollection', 
   Image: { /* required */
     Bytes: imageBytes || 'STRING_VALUE',  // no default yet...
   },
