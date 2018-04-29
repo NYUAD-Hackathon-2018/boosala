@@ -61,10 +61,10 @@ function parseData(dataVals) {
     if (matches.length > 0) {
         for (var i = 0; i < matches.length; ++i) {
             var match = matches[i];
-            if (match["Similarity"] >= 50) {
+            if (match["Similarity"] >= 55) {
                 matchFound = true;
                 console.log("MATCH");
-                
+
                 var missing_person_f_img = document.getElementById('missing_person_f');
                 missing_person_f_img.src = "data:image/png;base64," + dataImage;
                 $("#result").show();

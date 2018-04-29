@@ -67,8 +67,8 @@ function searchFacesByImage(imageData) {
 	   Image: { /* required */
 	     Bytes: imageBytes || 'STRING_VALUE',  // no default yet...
 	   },
-	   FaceMatchThreshold: 50.0,
-	   MaxFaces: 10
+	   FaceMatchThreshold: 55.0,
+	   MaxFaces: 5
     };
   
   rekognition.searchFacesByImage(params, function(err, data) {
