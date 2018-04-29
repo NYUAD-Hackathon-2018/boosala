@@ -8,6 +8,17 @@ $("#back").click(function () {
     $("#search").hide();
 });
 
+$("#back_logo").click(function () {
+    $("#home").show();
+    $("#search").hide();
+});
+
+$("#back_to_search").click(function () {
+    $("#result").hide();
+    $("#home").hide();
+    $("#search").show();
+});
+
 function readURL(input) {
     if (input.files && input.files[0]) {
         var reader = new FileReader();
@@ -18,6 +29,7 @@ function readURL(input) {
                 .height(200);
         };
         reader.readAsDataURL(input.files[0]);
+        // local storage of base64 of family's image for later display?
     }
 }
 
@@ -27,8 +39,9 @@ $("#submit").click(function (){
     localStorage.setItem("me", me);
     localStorage.setItem("their", their);
     $("#their-name").text(their);
-    $("#search").hide();
-    $("#home").hide();
+    $("#submit").html("Loading...");
+    ProcessImage();
+    window.setTimeout(function() {$("#search").hide(); $("#home").hide();$("#submit").html("Find");}, 4000);
 });
 
 
