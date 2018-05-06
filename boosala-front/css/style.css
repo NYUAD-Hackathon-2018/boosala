@@ -1,11 +1,11 @@
 /*~~~~~ Boosala Website Style ~~~~~*/
 
 /*~~ GLOBAL ~~*/
-html{height: 100%;font-family: 'Ubuntu', sans-serif;}
+html{height: 100%; sans-serif;}
 
 body{
     height: 100%;
-    font-family: 'Ubuntu';
+    font-family: 'Cairo';
     background-color: #f5f5f5;
     color: #1c1c1c;
     letter-spacing: -2px;
@@ -22,9 +22,7 @@ a{text-decoration: none !important; color: #1c1c1c; opacity: 0.8; transition: 10
 
 a#project_link:hover{text-decoration: underline;}
 
-textarea:focus, input:focus, button:focus{
-    outline: none;
-}
+textarea:focus, input:focus, button:focus{outline: none;}
 
 .align-center {text-align:center}
 .align-left {text-align:left}
@@ -89,12 +87,16 @@ textarea:focus, input:focus, button:focus{
 #home h4{font-size: 30px;opacity: 0.8}
 #home #start{font-size: 25px;color: #f5f5f5; background-color: #d62839;padding: 5px 150px; border-radius: 15px; border: 0px;margin-top: 30px; opacity: 0.8}
 #home #start:hover{opacity: 1}
-#home #main h2{font-size: 60px;position: relative;top: 45px;right: 160px}
-
+#home #main h2{font-size: 60px;position: relative;top: 45px;right: 120px}
 #home #languages{padding: 12rem;padding-top: 1rem;padding-bottom: 1rem;padding-right: 0em;z-index: 9999}
 #home #languages li{display: inline-block;padding: 0px 0px 0px 20px;font-size: 17px;}
 #home #languages button{border-width: 0;background: none;outline: none;}
 #home .focus{font-weight: 900}
+
+#home #languages a{color: #f5f5f5;opacity: .7;letter-spacing: 0px;transition: .5s}
+#home #languages a:hover{opacity: 1;transition: .5s}
+
+
 /*~ Search ~*/
 #search {display: none; padding: 0px;}
 #search .logo{position: absolute; width: 15%;padding-top: 50px}
