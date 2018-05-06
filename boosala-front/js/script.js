@@ -45,8 +45,13 @@ $("#submit").click(function (){
     $("#their-name").text(their);
 
     $("#their-name-not-found").text(their);
-    $("#submit").html("Searching for "+their+"...");
-    
+    var sentence = "";
+    if ($("#submit").text() === "ابحث"){
+        sentence = "..."+"البحث جار عن "+their;
+    }else{
+        sentence = "Searching for "+their+"...";
+    }
+    $("#submit").html(sentence);
 
     ProcessImage();
     window.setTimeout(function() {$("#search").hide(); $("#home").hide();$("#submit").html("Find");}, 4000);
